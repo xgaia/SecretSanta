@@ -3,6 +3,7 @@ FROM jmilette/apache-phpfpm:php-8.0
 ENV DEBIAN_FRONTEND=noninteractive
 
 ENV SERVERNAME=localhost
+
 ENV APP_ENV=panther
 ENV APP_SECRET=secret
 ENV APP_SALT=secret
@@ -10,14 +11,17 @@ ENV HOST=localhost
 ENV TRUSTED_PROXIES=127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
 ENV TRUSTED_HOSTS='^(localhost|example\.com)$'
 
-ENV DATABASE_URL="mysql://secretsanta:secretsanta@localhost/secretsanta?serverVersion=5.7&charset=utf8mb4"
 ENV MAILER_DSN=smtp://localhost:25
 ENV MANDRILL_DSN=smtp://localhost
 ENV NOREPLY_EMAIL=noreply@example.org
 ENV CONTACT_EMAIL=info@example.org
 ENV MAIL_FROM_ADDRESS=noreply@example.org
 ENV MAIL_FROM_NAME="noreply@example.org"
-ENV GEO_IP_DB_PATH=/usr/local/share/GeoIP/GeoLite2-City.mmdb
+
+ENV DATABASE_URL="mysql://secretsanta:secretsanta@localhost/secretsanta?serverVersion=5.7&charset=utf8mb4"
+
+ENV ADWORDS_PASSWORD=secret
+ENV GA_VIEW_ID=ga:00000000
 
 RUN apt-get update && apt-get install -y gettext-base git composer npm wget && \
     npm install -g n && \

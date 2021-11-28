@@ -13,7 +13,7 @@ cat > /var/www/.env <<EOL
 APP_ENV=$APP_ENV
 APP_SECRET=$APP_SECRET
 APP_SALT=$APP_SALT
-HOST==HOST
+HOST=$HOST
 TRUSTED_PROXIES=$TRUSTED_PROXIES
 TRUSTED_HOSTS=$TRUSTED_HOSTS
 ###< symfony/framework-bundle ###
@@ -32,8 +32,8 @@ DATABASE_URL=$DATABASE_URL
 ###< doctrine/doctrine-bundle ###
 
 ###> Marketing ###
-ADWORDS_PASSWORD=secret
-GA_VIEW_ID=ga:00000000
+ADWORDS_PASSWORD=$ADWORDS_PASSWORD
+GA_VIEW_ID=$GA_VIEW_ID
 ###< Marketing ###
 
 ###> Misc ###
