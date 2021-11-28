@@ -10,7 +10,7 @@ envsubst < /var/www/docker/apache.conf > /config/httpd/conf.d/site.conf
 rm /var/www/.env
 cat > /var/www/.env <<EOL
 ###> Symfony ###
-APP_ENV=dev
+APP_ENV=$APP_ENV
 APP_SECRET=$APP_SECRET
 APP_SALT=$APP_SALT
 HOST==HOST

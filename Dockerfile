@@ -3,7 +3,7 @@ FROM jmilette/apache-phpfpm:php-8.0
 ENV DEBIAN_FRONTEND=noninteractive
 
 ENV SERVERNAME=localhost
-# ENV APP_ENV=prod
+ENV APP_ENV=panther
 ENV APP_SECRET=secret
 ENV APP_SALT=secret
 ENV HOST=localhost
